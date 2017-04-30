@@ -1,7 +1,7 @@
 {
-    "version": "1.1.0",
+    "version": "2.0.0",
     "summary": "Access to the Gamepad API in pure Elm",
-    "repository": "https://github.com/zimbatm/elm-gamepad.git",
+    "repository": "https://github.com/kfish/elm-gamepad.git",
     "license": "MIT",
     "source-directories": [
         "src"
