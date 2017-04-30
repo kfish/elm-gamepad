@@ -9,6 +9,12 @@ module Gamepad exposing
 # Gamepads
 @docs gamepads
 
+# Gamepad
+@docs Gamepad
+
+# Button
+@docs Button
+
 -}
 
 import Task exposing (Task)
