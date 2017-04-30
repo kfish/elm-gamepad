@@ -1,44 +1,10 @@
 var _kfish$elm_gamepad$Native_Gamepad = function()
 {
 
-// Maintain a list of gamepads here
-// provide an interface where the user can just get the current state,
-// for our use case of only querying it from within our (elm-level) requestAnimationFrame
-// handler
-
 var haveEvents = 'ongamepadconnected' in window,
     getGamepads = navigator.getGamepads || navigator.webkitGetGamepads
 
 var controllers = [];
-
-//function connecthandler(e) {
-//  addgamepad(e.gamepad);
-//}
-
-//function addgamepad(gamepad) {
-//  controllers[gamepad.index] = gamepad;
-//}
-
-//function disconnecthandler(e) {
-//  removegamepad(e.gamepad);
-//}
-
-//function removegamepad(gamepad) {
-//  delete controllers[gamepad.index];
-//}
-
-//window.addEventListener("gamepadconnected", connecthandler);
-//window.addEventListener("gamepaddisconnected", disconnecthandler);
-
-    //window.addEventListener('gamepadconnected", function(e) {
-        // e.gamepad.index, e.gamepad.id, e.gamepad.buttons.length, e.gamepad.axes.length
-    //}
-
-    //window.addEventListener('gamepaddisconnected", function(e) {
-        // e.gamepad.index, e.gamepad.id
-    //}
-
-    //navigator.getGamepads()
 
 console.log("Have gamepad events?: " + haveEvents);
 
@@ -56,26 +22,6 @@ console.log("Have gamepad events?: " + haveEvents);
       return x;
     }
   }
-
-//function scangamepads()
-//{
-//    var gs = ensureArray(getGamepads.call(navigator));
-//
-//    console.log(gs);
-//
-//    for (var i = 0; i < gs.length; i++) {
-//        if (gs[i]) {
-//		console.log(gs[i]);
-//	}
-        //if (gs[i]) {
-        //    if (gs[i].index in controllers) {
-        //        controllers[gamepads[i].index] = gamepads[i];
-        //    } else {
-        //        addgamepad(gamepads[i]);
-        //    }
-       // }
- //   }
-//}
 
   // JS GamepadButton -> Elm Gamepad.Button
   function button(b) {
@@ -114,6 +60,7 @@ console.log("Have gamepad events?: " + haveEvents);
       mapping: t.mapping,
     };
   }
+
   // Change events on gamepads are not supported by the spec[1]. So instead
   // we poll the controllers for updates, diff with the last state and emit a
   // Signal if anything has changed.
@@ -149,14 +96,6 @@ console.log("Have gamepad events?: " + haveEvents);
         }
       }
     }
-
-    //if (hasChanges) {
-    //  localRuntime.notify(gamepads.id, gamepads.value);
-    //}
-
-    //if (current.length > 0) {
-    //  scheduleOne(updateGamepads);
-   // }
   }
 
   // Limit the noise, some controllers like to emit changes for really small
@@ -199,14 +138,11 @@ function gamepads(x)
 {
     return _elm_lang$core$Native_Scheduler.nativeBinding(function(callback) {
 
-            //if (!haveEvents) scangamepads();
             updateGamepads();
 
 	    callback(_elm_lang$core$Native_Scheduler.succeed(
                 _elm_lang$core$Native_List.fromArray(controllers)
             ));
-
-            //return { buttonA: 7 };
     });
 }
 

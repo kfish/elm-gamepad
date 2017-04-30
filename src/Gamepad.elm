@@ -35,7 +35,6 @@ type alias Gamepad =
 {-| Get the currently connected gamepads
 -}
 gamepads : (List Gamepad -> msg) -> Cmd msg
--- gamepads tagger = getGamepads |> Task.perform (always tagger []) tagger
 gamepads tagger = getGamepads |> Task.perform tagger
 
 getGamepads : Task x (List Gamepad)
