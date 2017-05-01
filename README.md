@@ -27,10 +27,13 @@ show them after a button has been pressed.
 This package contains a demo application
 [ShowGamepad.elm](ShowGamepad.elm) which displays the raw Gamepad type.
 
-To view it, clone this repository and run elm-reactor:
+[Live demo](http://kfish.github.io/elm-gamepad/)
+
+To view it locally, clone this repository and run elm-reactor:
 
 ```
 $ git clone https://github.com/kfish/elm-gamepad.git
+$ cd elm-gamepad
 $ elm-package install
 $ elm-reactor
 ```
