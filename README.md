@@ -1,3 +1,5 @@
+![Image of XBox 360 controller](images/xbox-1602822_1280.jpg)
+
 # elm-gamepad
 
 Use gamepad controllers in Elm applications.
