@@ -19,7 +19,7 @@ show them after a button has been pressed.
 
 ## Device and operating system support
 
-I'm developing this on Ubuntu Linux. I've tested it with:
+I'm developing this on Ubuntu Linux and tested it with:
 
 * wired USB controllers on Mac OS X, Ubuntu and Centos
 * Bluetooth controllers on Android (in Firefox)
