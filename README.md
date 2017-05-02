@@ -117,6 +117,15 @@ $ cd elm-gamepad
 $ elm-package install
 $ elm-reactor
 ```
+
+## Installation
+
+This package contains experimental Native code. It is not yet
+whiteliested for inclusion in the Elm package archive. To use
+it in your package you will need to use an unofficial installer
+like
+[elm-install](https://github.com/gdotdesign/elm-github-install)
+
 ## History
 
 This package was originally developed by @zimbatm for Elm 0.15. It was updated
