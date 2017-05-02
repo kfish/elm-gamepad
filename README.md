@@ -32,12 +32,56 @@ On Mac OS X you may need to install a driver, such as
 
 ## Usage
 
+A Gamepad is represented as an Elm record containing lists of
+Buttons and Axes. The values of these fields indicate the
+current state of that button or axis. According to the spec:
+
+> All button values must be linearly normalized to the range
+> [0.0 .. 1.0]. 0.0 must mean fully unpressed, and 1.0 must
+> mean fully pressed. For buttons without an analog sensor, only
+> the values 0.0 and 1.0 for fully unpressed and fully pressed
+> must be provided.
+
+Axes refers to the X and Y axes of joysticks:
+
+> All axis values must be linearly normalized to the range
+> [-1.0 .. 1.0]. As appropriate, -1.0 should correspond to
+> "up" or "left", and 1.0 should correspond to "down" or "right".
+
 ```elm
--- Get a current list of gamepads
-Gamepad.gamepads : (List Gamepad -> msg) -> Cmd msg
+{-| Button -}
+type alias Button =
+  { pressed : Bool
+  , value : Float
+  }
+
+{-| Gamepad -}
+type alias Gamepad =
+  { id : String
+  , axes : List Float
+  , buttons : List Button
+  , mapping : String
+  }
 ```
 
+Axis values are listed in pairs, X followed by Y.
+The buttons and axes appear in their respective lists in
+decreasing order of importance.
+
+The only defined mapping is "standard":
+
 ![Image of standard gamepad layout](https://w3c.github.io/gamepad/standard_gamepad.svg)
+
+### Polling interface
+
+To poll for the current state of connected gamepads:
+
+```elm
+{-| Get the currently connected gamepads
+-}
+gamepads : (List Gamepad -> msg) -> Cmd msg
+gamepads tagger = getGamepads |> Task.perform tagger
+```
 
 ## Demo
 
