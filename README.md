@@ -4,12 +4,12 @@ This package provides an Elm language interface for gamepad input.
 
 It works in most modern browsers with both wired and wireless controllers.
 
-![Image of XBox 360 controller](images/xbox-1602822_1280.jpg)
-
 * See [HTML5 Test](https://html5test.com/compare/feature/input.getGamepads.html) to
 check browser compatibility.
 
 * Use the [HTML5 Gamepad Tester](http://html5gamepad.com/) to test yours.
+
+![Image of XBox 360 controller](images/xbox-1602822_1280.jpg)
 
 Note that to avoid fingerprinting controllers, some browsers only
 show them after a button has been pressed.
