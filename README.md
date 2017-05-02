@@ -1,12 +1,12 @@
-![Image of XBox 360 controller](images/xbox-1602822_1280.jpg)
-
 # elm-gamepad
 
-Use gamepad controllers in Elm applications.
+This package provides an Elm language interface for gamepad input.
+
+It works in most modern browsers with both wired and wireless controllers.
+
+![Image of XBox 360 controller](images/xbox-1602822_1280.jpg)
 
 ## Browser support
-
-This is a wrapper around the [W3C Gamepad API](https://w3c.github.io/gamepad/).
 
 Most modern browsers support HTML5 gamepad input. See
 https://html5test.com/compare/feature/input.getGamepads.html
@@ -53,4 +53,8 @@ $ elm-reactor
 -- Get a current list of gamepads
 Gamepad.gamepads : (List Gamepad -> msg) -> Cmd msg
 ```
+
+## Resources
+
+ * [W3C Gamepad API](https://w3c.github.io/gamepad/).
 
