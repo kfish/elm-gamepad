@@ -27,8 +27,7 @@ I'm developing this on Ubuntu Linux. I've tested it with:
 It works out of the box on Linux and Android, and probably Windows.
 
 On Mac OS X you may need to install a driver, such as
-[XBox 360 controller driver for OSX]
-(http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller/OsxDriver).
+[XBox 360 controller driver for OSX](http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller/OsxDriver).
 
 ## Demo
 
