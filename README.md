@@ -34,7 +34,8 @@ On Mac OS X you may need to install a driver, such as
 
 A Gamepad is represented as an Elm record containing lists of
 Buttons and Axes. The values of these fields indicate the
-current state of that button or axis. According to the spec:
+current state of that button or axis. According to the
+[spec](spec):
 
 > All button values must be linearly normalized to the range
 > [0.0 .. 1.0]. 0.0 must mean fully unpressed, and 1.0 must
@@ -110,5 +111,6 @@ where it was updated for Elm versions 0.17 and 0.18.
 
 ## Resources
 
- * [W3C Gamepad API](https://w3c.github.io/gamepad/).
+ * [W3C Gamepad specification](spec)
 
+[spec]: https://w3c.github.io/gamepad/
