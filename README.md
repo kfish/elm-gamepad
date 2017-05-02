@@ -9,7 +9,7 @@ check browser compatibility.
 
 * Use the [HTML5 Gamepad Tester](http://html5gamepad.com/) to test yours.
 
-* See the [elm-gamepad live demo](http://kfish.github.io/elm-gamepad/) to view
+* See the [elm-gamepad live demo](demo) to view
 the raw data visible to your Elm application.
 
 Note that to avoid fingerprinting controllers, some browsers only
@@ -30,7 +30,7 @@ On Mac OS X you may need to install a driver, such as
 [XBox 360 controller driver for OSX](http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller/OsxDriver).
 
 
-## Usage
+## Elm interface
 
 A Gamepad is represented as an Elm record containing lists of
 Buttons and Axes. The values of these fields indicate the
@@ -73,25 +73,41 @@ The only defined mapping is "standard":
 
 ![Image of standard gamepad layout](https://w3c.github.io/gamepad/standard_gamepad.svg)
 
-### Polling interface
+### Polling for updates
 
-To poll for the current state of connected gamepads:
+The Gamepad module exposes a Cmd to request the current state
+of connected gamepads. 
 
 ```elm
-{-| Get the currently connected gamepads
--}
-gamepads : (List Gamepad -> msg) -> Cmd msg
-gamepads tagger = getGamepads |> Task.perform tagger
+import Gamepad
+
+type alias Model =
+    List Gamepad.Gamepad
+
+init : ( Model, Cmd Msg )
+init =
+    ( [], Gamepad.gamepads GamepadMsg )
+
+...
+
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    case msg of
+        GamepadMsg gamepads ->
+            -- In an actual game you would update your player
+            -- position here, rather than just returning the
+            -- raw gamepad data.
+            ( gamepads, Gamepad.gamepads GamepadMsg )
 ```
 
 ## Demo
 
 This package contains a demo application
-[ShowGamepad.elm](ShowGamepad.elm) which displays the raw Gamepad type.
+[ShowGamepad.elm](ShowGamepad.elm)
+which displays the raw Gamepad type.
+An instance is running [here](demo).
 
-[Live demo](http://kfish.github.io/elm-gamepad/)
-
-## Build locally
+### Build locally
 
 To view it locally, clone this repository and run elm-reactor:
 
@@ -114,3 +130,4 @@ where it was updated for Elm versions 0.17 and 0.18.
  * [W3C Gamepad specification](spec)
 
 [spec]: https://w3c.github.io/gamepad/
+[demo]: http://kfish.github.io/elm-gamepad/

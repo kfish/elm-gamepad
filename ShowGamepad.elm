@@ -25,6 +25,9 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         GamepadMsg gamepads ->
+            -- In an actual game you would update your player
+            -- position here, rather than just returning the
+            -- raw gamepad data.
             ( gamepads, Gamepad.gamepads GamepadMsg )
 
 subscriptions : Model -> Sub Msg
