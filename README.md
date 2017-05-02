@@ -17,7 +17,7 @@ show them after a button has been pressed.
 
 ![Image of XBox 360 controller](images/xbox-1602822_1280.jpg)
 
-## Platform support
+## Device and operating system support
 
 I'm developing this on Ubuntu Linux. I've tested it with:
 
