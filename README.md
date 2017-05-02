@@ -1,3 +1,5 @@
+:zap: _**Status:** Experimental API, for elm community discussion._
+
 # elm-gamepad
 
 This package provides an Elm language interface for gamepad input.
