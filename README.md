@@ -54,6 +54,14 @@ $ elm-reactor
 Gamepad.gamepads : (List Gamepad -> msg) -> Cmd msg
 ```
 
+## History
+
+This package was originally developed by @zimbatm for Elm 0.15. It was updated
+for Elm 0.16 by @kfish, and merged into
+[Dreambuggy](http://github.com/kfish/dreambuggy/),
+where it was updated for Elm versions 0.17 and 0.18.
+
+
 ## Resources
 
  * [W3C Gamepad API](https://w3c.github.io/gamepad/).
