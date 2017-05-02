@@ -34,8 +34,8 @@ On Mac OS X you may need to install a driver, such as
 
 ## Elm interface
 
-A Gamepad is represented as an Elm record containing lists of
-Buttons and Axes. The values of these fields indicate the
+A `Gamepad` is represented as an Elm record containing lists of
+`buttons` and `axes`. The values of these fields indicate the
 current state of that button or axis. According to the
 [spec](spec):
 
@@ -77,7 +77,7 @@ The only defined mapping is "standard":
 
 ### Polling for updates
 
-The Gamepad module exposes a Cmd to request the current state
+The `Gamepad` module exposes a `Cmd` to request the current state
 of connected gamepads. 
 
 ```elm
