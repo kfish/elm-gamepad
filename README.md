@@ -29,6 +29,16 @@ It works out of the box on Linux and Android, and probably Windows.
 On Mac OS X you may need to install a driver, such as
 [XBox 360 controller driver for OSX](http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller/OsxDriver).
 
+
+## Usage
+
+```elm
+-- Get a current list of gamepads
+Gamepad.gamepads : (List Gamepad -> msg) -> Cmd msg
+```
+
+![Image of standard gamepad layout](https://w3c.github.io/gamepad/standard_gamepad.svg)
+
 ## Demo
 
 This package contains a demo application
@@ -46,14 +56,6 @@ $ cd elm-gamepad
 $ elm-package install
 $ elm-reactor
 ```
-
-## API
-
-```elm
--- Get a current list of gamepads
-Gamepad.gamepads : (List Gamepad -> msg) -> Cmd msg
-```
-
 ## History
 
 This package was originally developed by @zimbatm for Elm 0.15. It was updated
