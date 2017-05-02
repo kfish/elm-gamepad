@@ -6,13 +6,11 @@ It works in most modern browsers with both wired and wireless controllers.
 
 ![Image of XBox 360 controller](images/xbox-1602822_1280.jpg)
 
-## Browser support
+* See [HTML5 Test](https://html5test.com/compare/feature/input.getGamepads.html) to
+check browser compatibility.
 
-Most modern browsers support HTML5 gamepad input. See
-https://html5test.com/compare/feature/input.getGamepads.html
+* Use the [HTML5 Gamepad Tester](http://html5gamepad.com/) to test yours.
 
-To test your gamepad and browser, use the
-[HTML5 Gamepad Tester](http://html5gamepad.com/).
 Note that to avoid fingerprinting controllers, some browsers only
 show them after a button has been pressed.
 
@@ -20,8 +18,8 @@ show them after a button has been pressed.
 
 I'm developing this on Ubuntu Linux. I've tested it with:
 
-	* wired USB controllers on Mac OS X, Ubuntu and Centos
-	* Bluetooth controllers on Android (in Firefox)
+* wired USB controllers on Mac OS X, Ubuntu and Centos
+* Bluetooth controllers on Android (in Firefox)
 
 It works out of the box on Linux and Android, and probably Windows.
 
