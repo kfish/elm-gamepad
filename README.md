@@ -9,10 +9,13 @@ check browser compatibility.
 
 * Use the [HTML5 Gamepad Tester](http://html5gamepad.com/) to test yours.
 
-![Image of XBox 360 controller](images/xbox-1602822_1280.jpg)
+* See the [elm-gamepad live demo](http://kfish.github.io/elm-gamepad/) to view
+the raw data visible to your Elm application.
 
 Note that to avoid fingerprinting controllers, some browsers only
 show them after a button has been pressed.
+
+![Image of XBox 360 controller](images/xbox-1602822_1280.jpg)
 
 ## Platform support
 
