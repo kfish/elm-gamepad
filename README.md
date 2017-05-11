@@ -39,7 +39,7 @@ and thumbsticks.
 
 ### Button
 
-A `Button` represents the current state of an analogue or digital
+A `Button` represents the current state of an analog or digital
 button or trigger. According to the [spec](https://w3c.github.io/gamepad/):
 
 > All button values must be linearly normalized to the range
@@ -58,7 +58,7 @@ type alias Button =
 
 ### Stick
 
-A `Stick` represents a thumbstick with two analogue axes `x` and `y`,
+A `Stick` represents a thumbstick with two analog axes `x` and `y`,
 and a `Button` for pressing down on the stick.
 
 > All axis values must be linearly normalized to the range
