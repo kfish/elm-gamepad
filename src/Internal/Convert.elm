@@ -6,7 +6,7 @@ import Internal.Types exposing (..)
 
 convert : RawGamepad_ -> Gamepad
 convert rawGamepad =
-    if contains rawGamepad.id "STANDARD GAMEPAD" then
+    if contains "STANDARD GAMEPAD" rawGamepad.id then
         fromStandardMapping rawGamepad
     else
         fromUnknownMapping rawGamepad
