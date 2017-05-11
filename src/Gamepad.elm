@@ -27,6 +27,12 @@ type alias Button =
   , value : Float
   }
 
+{-| Axis -}
+type alias Axes =
+  { x : Float
+  , y : Float
+  }
+
 {-| Gamepad -}
 type Gamepad =
   StandardGamepad StandardGamepad_
@@ -35,6 +41,30 @@ type Gamepad =
 -- | StandardGamepad
 type alias StandardGamepad_ =
   { id : String
+
+  , buttonSelect : Button
+  , buttonStart  : Button
+  , buttonLogo   : Button
+
+  , buttonA : Button
+  , buttonB : Button
+  , buttonX : Button
+  , buttonY : Button
+
+  , leftTrigger    : Button
+  , leftBumper     : Button
+  , leftStick      : Axes
+  , leftStickPress : Button
+
+  , rightTrigger    : Button
+  , rightBumper     : Button
+  , rightStick      : Axes
+  , rightStickPress : Button
+
+  , dPadUp    : Button
+  , dPadDown  : Button
+  , dPadLeft  : Button
+  , dPadRight : Button
   }
 
 {-| RawGamepad -}
