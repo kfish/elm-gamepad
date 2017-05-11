@@ -21,7 +21,7 @@ type Gamepad =
 type alias StandardGamepad_ =
   { id : String
 
-  , buttonSelect : Button
+  , buttonBack   : Button
   , buttonStart  : Button
   , buttonLogo   : Button
 
