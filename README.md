@@ -11,7 +11,7 @@ check browser compatibility.
 
 * Use the [HTML5 Gamepad Tester](http://html5gamepad.com/) to test yours.
 
-* See the [elm-gamepad live demo](demo) to view
+* See the [elm-gamepad live demo](http://kfish.github.io/elm-gamepad/) to view
 the raw data visible to your Elm application.
 
 Note that to avoid fingerprinting controllers, some browsers only
@@ -40,7 +40,7 @@ and thumbsticks.
 ### Button
 
 A `Button` represents the current state of an analogue or digital
-button or trigger. According to the [spec](spec):
+button or trigger. According to the [spec](https://w3c.github.io/gamepad/):
 
 > All button values must be linearly normalized to the range
 > [0.0 .. 1.0]. 0.0 must mean fully unpressed, and 1.0 must
@@ -170,7 +170,7 @@ update msg model =
 This package contains a demo application
 [ShowGamepad.elm](ShowGamepad.elm)
 which displays the raw Gamepad type.
-An instance is running [here](demo).
+An instance is running [here](http://kfish.github.io/elm-gamepad/).
 
 ### Build locally
 
@@ -201,7 +201,4 @@ where it was updated for Elm versions 0.17 and 0.18.
 
 ## Resources
 
- * [W3C Gamepad specification](spec)
-
-[spec]: https://w3c.github.io/gamepad/
-[demo]: http://kfish.github.io/elm-gamepad/
+ * [W3C Gamepad specification](https://w3c.github.io/gamepad/)
