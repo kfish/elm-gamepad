@@ -3,13 +3,14 @@ module Internal.Types exposing (..)
 {-| Button -}
 type alias Button =
     { pressed : Bool
-    , value : Float
+    , value   : Float
     }
 
-{-| Axes -}
-type alias Axes =
-    { x : Float
-    , y : Float
+{-| Stick -}
+type alias Stick =
+    { x      : Float
+    , y      : Float
+    , button : Button
     }
 
 {-| Gamepad -}
@@ -32,13 +33,11 @@ type alias StandardGamepad_ =
 
    , leftTrigger    : Button
    , leftBumper     : Button
-   , leftStick      : Axes
-   , leftStickPress : Button
+   , leftStick      : Stick
 
    , rightTrigger    : Button
    , rightBumper     : Button
-   , rightStick      : Axes
-   , rightStickPress : Button
+   , rightStick      : Stick
 
    , dPadUp    : Button
    , dPadDown  : Button

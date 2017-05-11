@@ -33,13 +33,11 @@ fromStandardMapping rawGamepad =
 
                 , leftTrigger    = lT
                 , leftBumper     = lb
-                , leftStick      = { x = x1, y = y1 }
-                , leftStickPress = lstick
+                , leftStick      = { x = x1, y = y1, button = lstick }
 
                 , rightTrigger    = rT
                 , rightBumper     = rb
-                , rightStick      = { x = x2, y = y2 }
-                , rightStickPress = rstick
+                , rightStick      = { x = x2, y = y2, button = rstick }
 
                 , dPadUp    = padU
                 , dPadDown  = padD
@@ -91,13 +89,11 @@ fromUnknownMapping rawGamepad =
 
                         , leftTrigger    = lT
                         , leftBumper     = lb
-                        , leftStick      = { x = x1, y = y1 }
-                        , leftStickPress = lstick
+                        , leftStick      = { x = x1, y = y1, button = lstick }
 
                         , rightTrigger    = rT
                         , rightBumper     = rb
-                        , rightStick      = { x = x2, y = y2 }
-                        , rightStickPress = rstick
+                        , rightStick      = { x = x2, y = y2, button = rstick }
 
                         , dPadUp    = padU
                         , dPadDown  = padD

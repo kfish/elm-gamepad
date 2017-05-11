@@ -1,6 +1,6 @@
 module Gamepad exposing
   ( Gamepad
-  , Axes
+  , Stick
   , Button
   , gamepads
   )
@@ -13,8 +13,8 @@ module Gamepad exposing
 # Gamepad
 @docs Gamepad
 
-# Axes
-@docs Axes
+# Stick
+@docs Stick
 
 # Button
 @docs Button
@@ -27,8 +27,8 @@ import Internal.Convert exposing (convert)
 import Internal.Types as Types
 import Native.Gamepad
 
-{-| Axes -}
-type alias Axes    = Types.Axes
+{-| Stick -}
+type alias Stick    = Types.Stick
 
 {-| Button -}
 type alias Button  = Types.Button
