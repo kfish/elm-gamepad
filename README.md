@@ -119,11 +119,9 @@ type alias StandardGamepad_ =
 If a controller is unknown it will appear as a `RawGamepad`.
 
 `RawGamepad` is the underlying HTML5 Gamepad representation,
-containing lists of `Buttons`, and `float`s for the axes.
+containing lists of `Buttons`, and `floats` for the axes.
 
 Axis values are listed in pairs, X followed by Y.
-The buttons and axes appear in their respective lists in
-decreasing order of importance.
 
 ```elm
 {-| RawGamepad -}
