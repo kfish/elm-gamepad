@@ -34,10 +34,13 @@ On Mac OS X you may need to install a driver, such as
 
 ## Elm interface
 
-A `Gamepad` is represented as an Elm record containing lists of
-`buttons` and `axes`. The values of these fields indicate the
-current state of that button or axis. According to the
-[spec](spec):
+A `StandardGamepad` is a record with named fields for buttons
+and thumbsticks.
+
+### Button
+
+A `Button` represents the current state of an analogue or digital
+button or trigger. According to the [spec](spec):
 
 > All button values must be linearly normalized to the range
 > [0.0 .. 1.0]. 0.0 must mean fully unpressed, and 1.0 must
@@ -45,31 +48,90 @@ current state of that button or axis. According to the
 > the values 0.0 and 1.0 for fully unpressed and fully pressed
 > must be provided.
 
-Axes refers to the X and Y axes of joysticks:
-
-> All axis values must be linearly normalized to the range
-> [-1.0 .. 1.0]. As appropriate, -1.0 should correspond to
-> "up" or "left", and 1.0 should correspond to "down" or "right".
-
 ```elm
 {-| Button -}
 type alias Button =
   { pressed : Bool
   , value : Float
   }
-
-{-| Gamepad -}
-type alias Gamepad =
-  { id : String
-  , axes : List Float
-  , buttons : List Button
-  , mapping : String
-  }
 ```
+
+### Stick
+
+A `Stick` represents a thumbstick with two analogue axes `x` and `y`,
+and a `Button` for pressing down on the stick.
+
+> All axis values must be linearly normalized to the range
+> [-1.0 .. 1.0]. As appropriate, -1.0 should correspond to
+> "up" or "left", and 1.0 should correspond to "down" or "right".
+
+```elm
+{-| Stick -}
+type alias Stick =
+    { x : Float
+    , y : Float
+    , button : Button
+    }
+```
+
+### StandardGamepad
+
+```elm
+{-| Gamepad -}
+type Gamepad =
+      StandardGamepad StandardGamepad_
+    | RawGamepad RawGamepad_
+
+-- | StandardGamepad
+type alias StandardGamepad_ =
+    { id : String
+
+   , buttonBack   : Button
+   , buttonStart  : Button
+   , buttonLogo   : Button
+
+   , buttonA : Button
+   , buttonB : Button
+   , buttonX : Button
+   , buttonY : Button
+
+   , leftTrigger    : Button
+   , leftBumper     : Button
+   , leftStick      : Axes
+   , leftStickPress : Button
+
+   , rightTrigger    : Button
+   , rightBumper     : Button
+   , rightStick      : Axes
+   , rightStickPress : Button
+
+   , dPadUp    : Button
+   , dPadDown  : Button
+   , dPadLeft  : Button
+   , dPadRight : Button
+   }
+```
+
+### RawGamepad
+
+Most controllers are converted to `StandardGamepad` by your browser and `elm-gamepad`,
+however if it is unknown it will appear as a `RawGamepad`.
+
+`RawGamepad` is the underlying HTML5 Gamepad representation,
+containing lists of `Buttons`, and `float`s for the axes.
 
 Axis values are listed in pairs, X followed by Y.
 The buttons and axes appear in their respective lists in
 decreasing order of importance.
+
+```elm
+{-| RawGamepad -}
+type alias RawGamepad_ =
+   { id : String
+   , axes : List Float
+   , buttons : List Button
+   , mapping : String
+```
 
 The only defined mapping is "standard":
 
