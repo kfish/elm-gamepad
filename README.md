@@ -76,6 +76,8 @@ type alias Stick =
 
 ### StandardGamepad
 
+Most controllers are converted to `StandardGamepad` by your browser and `elm-gamepad`.
+
 ```elm
 {-| Gamepad -}
 type Gamepad =
@@ -114,8 +116,7 @@ type alias StandardGamepad_ =
 
 ### RawGamepad
 
-Most controllers are converted to `StandardGamepad` by your browser and `elm-gamepad`,
-however if it is unknown it will appear as a `RawGamepad`.
+If a controller is unknown it will appear as a `RawGamepad`.
 
 `RawGamepad` is the underlying HTML5 Gamepad representation,
 containing lists of `Buttons`, and `float`s for the axes.
