@@ -28,7 +28,17 @@ type alias Button =
   }
 
 {-| Gamepad -}
-type alias Gamepad =
+type Gamepad =
+  StandardGamepad StandardGamepad_
+  | RawGamepad RawGamepad_
+
+-- | StandardGamepad
+type alias StandardGamepad_ =
+  { id : String
+  }
+
+{-| RawGamepad -}
+type alias RawGamepad_ =
   { id : String
   , axes : List Float
   , buttons : List Button
@@ -41,7 +51,10 @@ type alias Gamepad =
 {-| Get the currently connected gamepads
 -}
 gamepads : (List Gamepad -> msg) -> Cmd msg
-gamepads tagger = getGamepads |> Task.perform tagger
+gamepads tagger = Task.map (List.map convert) getRawGamepads |> Task.perform tagger
 
-getGamepads : Task x (List Gamepad)
-getGamepads = Native.Gamepad.gamepads 1.0
+convert : RawGamepad_ -> Gamepad
+convert rg = RawGamepad rg
+
+getRawGamepads : Task x (List RawGamepad_)
+getRawGamepads = Native.Gamepad.gamepads 1.0
