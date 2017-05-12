@@ -193,6 +193,9 @@ for Elm 0.16 by @kfish, and merged into
 [Dreambuggy](http://github.com/kfish/dreambuggy/),
 where it was updated for Elm versions 0.17 and 0.18.
 
+## License
+
+MIT Licensed, see LICENSE for more details.
 
 ## Resources
 
