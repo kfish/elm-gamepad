@@ -11,7 +11,7 @@ check browser compatibility.
 
 * Use the [HTML5 Gamepad Tester](http://html5gamepad.com/) to test yours.
 
-* Use the [elm-gamepad-tester](http://kfish.github.io/elm-gamepad-tester/)
+* Use the [elm-gamepad Tester](http://kfish.github.io/elm-gamepad-tester/)
 to view the data visible to your Elm application.
 
 Note that to avoid fingerprinting controllers, some browsers only
