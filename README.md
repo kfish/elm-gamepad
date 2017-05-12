@@ -99,13 +99,11 @@ type alias StandardGamepad_ =
 
    , leftTrigger    : Button
    , leftBumper     : Button
-   , leftStick      : Axes
-   , leftStickPress : Button
+   , leftStick      : Stick
 
    , rightTrigger    : Button
    , rightBumper     : Button
-   , rightStick      : Axes
-   , rightStickPress : Button
+   , rightStick      : Stick
 
    , dPadUp    : Button
    , dPadDown  : Button
