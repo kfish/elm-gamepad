@@ -1,5 +1,5 @@
 module Gamepad exposing
-  ( Gamepad
+  ( Gamepad(..)
   , Stick
   , Button
   , gamepads
