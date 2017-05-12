@@ -78,6 +78,8 @@ type alias Stick =
 
 Most controllers are converted to `StandardGamepad` by your browser and `elm-gamepad`.
 
+![Image of StandardGamepad mapping](images/StandardGamepad.jpg)
+
 ```elm
 {-| Gamepad -}
 type Gamepad =
@@ -111,8 +113,6 @@ type alias StandardGamepad_ =
    , dPadRight : Button
    }
 ```
-![Image of StandardGamepad mapping](images/StandardGamepad.jpg)
-
 ### RawGamepad
 
 If a controller is unknown it will appear as a `RawGamepad`.
@@ -131,9 +131,11 @@ type alias RawGamepad_ =
    , mapping : String
 ```
 
+<!--
 The only defined mapping is "standard":
 
 ![Image of standard gamepad layout](https://w3c.github.io/gamepad/standard_gamepad.svg)
+-->
 
 ### Polling for updates
 
