@@ -111,6 +111,7 @@ type alias StandardGamepad_ =
    , dPadRight : Button
    }
 ```
+![Image of StandardGamepad mapping](images/StandardGamepad.jpg)
 
 ### RawGamepad
 
