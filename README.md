@@ -49,7 +49,6 @@ button or trigger. According to the [spec](https://w3c.github.io/gamepad/):
 > must be provided.
 
 ```elm
-{-| Button -}
 type alias Button =
   { pressed : Bool
   , value : Float
@@ -66,7 +65,6 @@ and a `Button` for pressing down on the stick.
 > "up" or "left", and 1.0 should correspond to "down" or "right".
 
 ```elm
-{-| Stick -}
 type alias Stick =
     { x : Float
     , y : Float
@@ -81,12 +79,10 @@ Most controllers are converted to `StandardGamepad` by your browser and `elm-gam
 ![Image of StandardGamepad mapping](images/StandardGamepad.jpg)
 
 ```elm
-{-| Gamepad -}
 type Gamepad =
       StandardGamepad StandardGamepad_
     | RawGamepad RawGamepad_
 
--- | StandardGamepad
 type alias StandardGamepad_ =
     { id : String
 
@@ -123,7 +119,6 @@ containing lists of `Buttons`, and `floats` for the axes.
 Axis values are listed in pairs, X followed by Y.
 
 ```elm
-{-| RawGamepad -}
 type alias RawGamepad_ =
    { id : String
    , axes : List Float
