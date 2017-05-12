@@ -160,11 +160,17 @@ update msg model =
             ( gamepads, Gamepad.gamepads GamepadMsg )
 ```
 
-## Demo
+## elm-gamepad Tester
+
+For a user-friendly app, see
+[elm-gamepad-tester](https://github.com/kfish/elm-gamepad-tester).
+
+## Minimal demo
 
 This package contains a demo application
 [ShowGamepad.elm](ShowGamepad.elm)
 which displays the raw Gamepad type.
+
 An instance is running [here](http://kfish.github.io/elm-gamepad/).
 
 ### Build locally
