@@ -4,7 +4,7 @@ import String exposing (contains)
 
 import Internal.Types exposing (..)
 
-convert : RawGamepad_ -> Gamepad
+convert : RawGamepad_ -> Result RawGamepad_ StandardGamepad_
 convert rawGamepad =
     if contains "STANDARD GAMEPAD" rawGamepad.id then
         fromStandardMapping rawGamepad
@@ -12,15 +12,14 @@ convert rawGamepad =
         fromUnknownMapping rawGamepad
 
 
-fromStandardMapping : RawGamepad_ -> Gamepad
+fromStandardMapping : RawGamepad_ -> Result RawGamepad_ StandardGamepad_
 fromStandardMapping rawGamepad =
     case (rawGamepad.axes, rawGamepad.buttons) of
         ( [x1, y1, x2, y2]
         , [ a, b, x, y, lb, rb, lT, rT, back, start
           , lstick, rstick, padU, padD, padL, padR, logo]
         ) ->
-
-            StandardGamepad
+            Ok
                 { id = rawGamepad.id
                 , buttonBack  = back
                 , buttonStart = start
@@ -48,7 +47,7 @@ fromStandardMapping rawGamepad =
         _ -> fromUnknownMapping rawGamepad
 
 
-fromUnknownMapping : RawGamepad_ -> Gamepad
+fromUnknownMapping : RawGamepad_ -> Result RawGamepad_ StandardGamepad_
 fromUnknownMapping rawGamepad =
     case (rawGamepad.axes, rawGamepad.buttons) of
         -- Performance Designed Products Rock Candy Gamepad for Xbox 360 (Vendor: 0e6f Product: 011f)
@@ -75,7 +74,7 @@ fromUnknownMapping rawGamepad =
 
             in
 
-                    StandardGamepad
+                    Ok
                         { id = rawGamepad.id
 
                         , buttonBack  = back
@@ -101,5 +100,5 @@ fromUnknownMapping rawGamepad =
                         , dPadRight = padR
                         }
 
-        _ -> RawGamepad rawGamepad
+        _ -> Err rawGamepad
 

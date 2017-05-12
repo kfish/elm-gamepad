@@ -13,11 +13,6 @@ type alias Stick =
     , button : Button
     }
 
-{-| Gamepad -}
-type Gamepad =
-      StandardGamepad StandardGamepad_
-    | RawGamepad RawGamepad_
-
 -- | StandardGamepad
 type alias StandardGamepad_ =
     { id : String

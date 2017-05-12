@@ -23,7 +23,7 @@ module Gamepad exposing
 
 import Task exposing (Task)
 
-import Internal.Convert exposing (convert)
+import Internal.Convert as Convert
 import Internal.Types as Types
 import Native.Gamepad
 
@@ -34,8 +34,14 @@ type alias Stick    = Types.Stick
 type alias Button  = Types.Button
 
 {-| Gamepad -}
-type alias Gamepad = Types.Gamepad
+type Gamepad =
+      StandardGamepad Types.StandardGamepad_
+    | RawGamepad Types.RawGamepad_
 
+convert : Types.RawGamepad_ -> Gamepad
+convert rawGamepad = case Convert.convert rawGamepad of
+    Ok  sg -> StandardGamepad sg
+    Err rg -> RawGamepad rg
 
 {-| Get the currently connected gamepads
 -}
