@@ -129,6 +129,7 @@ type alias RawGamepad_ =
    , axes : List Float
    , buttons : List Button
    , mapping : String
+   }
 ```
 
 <!--
