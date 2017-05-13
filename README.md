@@ -200,7 +200,7 @@ The current line to add to your `elm-package.json` is:
 
 _Please send a pull request editing this `README` if the line above is out of date._
 You can always copy from
-[elm-gamepad-tester/elm-package.json](https://github.com/kfish/elm-gamepad-tester/elm-package.json).
+[elm-gamepad-tester/elm-package.json](https://github.com/kfish/elm-gamepad-tester/blob/master/elm-package.json).
 
 
 ## History
