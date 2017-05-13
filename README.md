@@ -210,6 +210,12 @@ for Elm 0.16 by @kfish, and merged into
 [Dreambuggy](http://github.com/kfish/dreambuggy/),
 where it was updated for Elm versions 0.17 and 0.18.
 
+### Discussons
+
+* [Named controller buttons in elm-gamepad 3.0.0](https://www.reddit.com/r/elm/comments/6ao80p/named_controller_buttons_in_elmgamepad_300/) _May 12, 2017_
+* [elm-gamepad updated for 0.18, looking for API advice](https://www.reddit.com/r/elm/comments/695egr/elmgamepad_updated_for_018_looking_for_api_advice/) _May 4 2017_
+* [Gamepad API & Device Orientation](https://www.reddit.com/r/elm/comments/2wvdvb/gamepad_api_device_orientation/) _Feb 23 2015_
+
 ## License
 
 MIT Licensed, see LICENSE for more details.
