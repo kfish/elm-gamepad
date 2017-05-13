@@ -192,6 +192,17 @@ it in your package you will need to use an unofficial installer
 like
 [elm-install](https://github.com/gdotdesign/elm-github-install)
 
+The current line to add to your `elm-package.json` is:
+
+```json
+        "kfish/elm-gamepad": "3.2.0 <= v < 4.0.0"
+```
+
+_Please send a pull request editing this `README` if the line above is out of date._
+You can always copy from
+[elm-gamepad-tester/elm-package.json](https://github.com/kfish/elm-gamepad-tester/elm-package.json).
+
+
 ## History
 
 This package was originally developed by @zimbatm for Elm 0.15. It was updated
