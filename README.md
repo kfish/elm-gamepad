@@ -127,6 +127,12 @@ type alias RawGamepad_ =
    }
 ```
 
+If your gamepad shows as RawGamepad, it is useful to write a function
+to convert it to StandardGamepad.
+I'll gladly accept patches to `src/Internal/Convert.elm` to add support for
+unknown gamepads, so that other users with your model of gamepad can play
+Elm games.
+
 <!--
 The only defined mapping is "standard":
 
