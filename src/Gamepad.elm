@@ -3,12 +3,14 @@ module Gamepad exposing
   , Stick
   , Button
   , gamepads
+  , rawGamepads
   )
 
 {-| You might have some gamepads attached. This library helps you play.
 
 # Gamepads
 @docs gamepads
+@docs rawGamepads
 
 # Gamepad
 @docs Gamepad
@@ -48,6 +50,14 @@ convert rawGamepad = case Convert.convert rawGamepad of
 gamepads : (List Gamepad -> msg) -> Cmd msg
 gamepads tagger =
     Task.map (List.map convert) getRawGamepads
+    |> Task.perform tagger
+
+{-| Get the currently connected gamepads, all as RawGamepad
+This is mainly useful for debugging
+-}
+rawGamepads : (List Gamepad -> msg) -> Cmd msg
+rawGamepads tagger =
+    Task.map (List.map RawGamepad) getRawGamepads
     |> Task.perform tagger
 
 getRawGamepads : Task x (List Types.RawGamepad_)
