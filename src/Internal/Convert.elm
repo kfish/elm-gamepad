@@ -5,6 +5,19 @@ import Internal.Types exposing (..)
 import Internal.Convert.Standard as Standard
 import Internal.Convert.RockCandy as RockCandy
 
+{-
+
+SDL Game Controller DB:
+    https://github.com/gabomdq/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt
+
+Chromium:
+    https://cs.chromium.org/chromium/src/device/gamepad/
+
+Firefox:
+    https://dxr.mozilla.org/mozilla-central/source/dom/gamepad
+
+-}
+
 conversions : List (RawGamepad_ -> Maybe StandardGamepad_)
 conversions =
     [ Standard.convert
