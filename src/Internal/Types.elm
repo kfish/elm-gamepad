@@ -1,53 +1,59 @@
 module Internal.Types exposing (..)
 
-{-| Button -}
+{-| Button
+-}
+
+
 type alias Button =
     { pressed : Bool
-    , value   : Float
+    , value : Float
     }
 
-{-| Stick -}
+
+{-| Stick
+-}
 type alias Stick =
-    { x      : Float
-    , y      : Float
+    { x : Float
+    , y : Float
     , button : Button
     }
 
+
+
 -- | StandardGamepad
+
+
 type alias StandardGamepad_ =
     { id : String
+    , buttonBack : Button
+    , buttonStart : Button
+    , buttonLogo : Button
+    , buttonA : Button
+    , buttonB : Button
+    , buttonX : Button
+    , buttonY : Button
+    , leftTrigger : Button
+    , leftBumper : Button
+    , leftStick : Stick
+    , rightTrigger : Button
+    , rightBumper : Button
+    , rightStick : Stick
+    , dPadUp : Button
+    , dPadDown : Button
+    , dPadLeft : Button
+    , dPadRight : Button
+    }
 
-   , buttonBack   : Button
-   , buttonStart  : Button
-   , buttonLogo   : Button
 
-   , buttonA : Button
-   , buttonB : Button
-   , buttonX : Button
-   , buttonY : Button
-
-   , leftTrigger    : Button
-   , leftBumper     : Button
-   , leftStick      : Stick
-
-   , rightTrigger    : Button
-   , rightBumper     : Button
-   , rightStick      : Stick
-
-   , dPadUp    : Button
-   , dPadDown  : Button
-   , dPadLeft  : Button
-   , dPadRight : Button
-   }
-
-{-| RawGamepad -}
+{-| RawGamepad
+-}
 type alias RawGamepad_ =
-   { id : String
-   , axes : List Float
-   , buttons : List Button
-   , mapping : String
-   -- connected
-   -- index
-   -- timestamp
-   }
+    { id : String
+    , axes : List Float
+    , buttons : List Button
+    , mapping : String
 
+    -- connected
+    -- index
+    -- timestamp
+    }

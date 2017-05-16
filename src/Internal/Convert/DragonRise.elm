@@ -29,7 +29,8 @@ convert rawGamepad =
                     , buttonStart = bStart
                     , buttonLogo =
                         emptyTrigger
-                        -- doesn't have a logo button
+
+                    -- doesn't have a logo button
                     , buttonA = bA
                     , buttonB = bB
                     , buttonX = bX
