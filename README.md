@@ -186,7 +186,7 @@ To view it locally, clone this repository and run elm-reactor:
 ```
 $ git clone https://github.com/kfish/elm-gamepad.git
 $ cd elm-gamepad
-$ elm-package install
+$ elm-install
 $ elm-reactor
 ```
 
