@@ -1,9 +1,9 @@
-module Internal.Convert exposing (convert)
+module Gamepad.Convert exposing (convert)
 
-import Internal.Types exposing (..)
-import Internal.Convert.Standard as Standard
-import Internal.Convert.RockCandy as RockCandy
-import Internal.Convert.DragonRise as DragonRise
+import Gamepad.Types exposing (..)
+import Gamepad.Convert.Standard as Standard
+import Gamepad.Convert.RockCandy as RockCandy
+import Gamepad.Convert.DragonRise as DragonRise
 
 
 {-

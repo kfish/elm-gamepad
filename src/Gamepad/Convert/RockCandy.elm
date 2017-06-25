@@ -1,7 +1,7 @@
-module Internal.Convert.RockCandy exposing (convert)
+module Gamepad.Convert.RockCandy exposing (convert)
 
 import String exposing (contains)
-import Internal.Types exposing (..)
+import Gamepad.Types exposing (..)
 
 
 -- Performance Designed Products Rock Candy Gamepad for Xbox 360 (Vendor: 0e6f Product: 011f)

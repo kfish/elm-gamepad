@@ -1,7 +1,7 @@
-module Internal.Convert.DragonRise exposing (convert)
+module Gamepad.Convert.DragonRise exposing (convert)
 
 import String exposing (contains)
-import Internal.Types exposing (..)
+import Gamepad.Types exposing (..)
 
 
 -- DragonRise Inc. Generic USB Joystick (Vendor: 0079 Product: 0006)

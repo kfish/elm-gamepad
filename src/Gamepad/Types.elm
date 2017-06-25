@@ -1,4 +1,4 @@
-module Internal.Types exposing (..)
+module Gamepad.Types exposing (..)
 
 {-| Button
 -}

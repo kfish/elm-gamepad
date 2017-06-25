@@ -33,8 +33,8 @@ module Gamepad
 -}
 
 import Task exposing (Task)
-import Internal.Convert as Convert
-import Internal.Types as Types
+import Gamepad.Convert as Convert
+import Gamepad.Types as Types
 import Native.Gamepad
 
 

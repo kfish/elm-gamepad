@@ -1,7 +1,7 @@
-module Internal.Convert.Standard exposing (convert)
+module Gamepad.Convert.Standard exposing (convert)
 
 import String exposing (contains)
-import Internal.Types exposing (..)
+import Gamepad.Types exposing (..)
 
 
 convert : RawGamepad_ -> Maybe StandardGamepad_
