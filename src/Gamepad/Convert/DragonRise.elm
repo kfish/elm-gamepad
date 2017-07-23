@@ -15,7 +15,7 @@ convert rawGamepad =
         , rawGamepad.buttons
         )
     of
-        ( True, [ x1, y1, x2, y2 ], [ bY, bB, bA, bX, lB, rB, lT, rT, bBack, bStart, leftStickButton, rightStickButton, dPadUp, dPadDown, dPadLeft, dPadRight ] ) ->
+        ( True, [ x1, x2, y1, y2 ], [ bY, bB, bA, bX, lB, rB, lT, rT, bBack, bStart, leftStickButton, rightStickButton, dPadUp, dPadDown, dPadLeft, dPadRight ] ) ->
             let
                 emptyTrigger =
                     { pressed = False, value = 0 }
